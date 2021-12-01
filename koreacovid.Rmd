@@ -64,6 +64,15 @@ died of levels of 64% of those infected.
   
 ## Numerical results
 
+```{r}
+table1 <- xtabs(~result + sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+Men died at almost twice the rate as women died from covid-19 in Korea. 36% of the dead were female and 64% were men.
+
+Very few people died of covid, only 1.4% of females died, however 3% of men die almost twice the rate than women.
 
 ## Inferential results 
 
