@@ -40,9 +40,23 @@ with(kRdata, table(Sex, result))
 ## We create two bar charts - one based on frequency and the other on percent, use ggplot commands to do this
 
 `
+```{r}
+dd2 <- kRdata %>% group_by(result, sex) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
-  
 
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=result,y=count,fill=sex))
+basicC + geom_bar(stat="identity", position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=sex))
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+Among those who died in Korea, most of them were men. Woman died at almost half the rate as men died in Korea from covid. The right bar graph shows women died at a level of 36% of the infected and it shows that men (blue)
+died of levels of 64% of those infected.
 
 
 
