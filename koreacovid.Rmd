@@ -89,9 +89,9 @@ The fisher exact test shows that men died at 2.3 times the rate that women died.
 
 ## Conclusions
 
+We reject the null hypothesis, because the P value is too low. Men died at 2.3 times the rate that women did. we conclude that the death rate of South Koreans was dependent on sex.
 
 
 
 
-## Conclusions
 
